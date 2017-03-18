@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Verification Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Verification" class="dashAnchor"></a>
+    <a title="Verification Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (81% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Verification Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Verification.html">Verification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HeaderTextType.html">HeaderTextType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PhoneNumberType.html">PhoneNumberType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/PhoneNumber.html">PhoneNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Theme.html">Theme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:15VerificationKit20EmailValidationBlock">EmailValidationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:15VerificationKit27EmailVerificationCompletion">EmailVerificationCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:15VerificationKit20PhoneValidationBlock">PhoneValidationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:15VerificationKit27PhoneVerificationCompletion">PhoneVerificationCompletion</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Verification</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Verification</span></code></pre>
+
+                </div>
+              </div>
+            <p>Primary interface of VerificationKit.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC15VerificationKit12Verification6sharedS0_"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC15VerificationKit12Verification6sharedS0_">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The singleton instance of VerificationKit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">Verification</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification7appNameSS"></a>
+                    <a name="//apple_ref/swift/Property/appName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification7appNameSS">appName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The app name which will appear in the SMS message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">appName</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification19acceptedNumberTypesGSaOS_15PhoneNumberType_"></a>
+                    <a name="//apple_ref/swift/Property/acceptedNumberTypes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification19acceptedNumberTypesGSaOS_15PhoneNumberType_">acceptedNumberTypes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An array of acceppted number types. Possible item values are .landline,
+.mobile and .voip.
+You need to setup an AWS Lambda function to look up number types.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">acceptedNumberTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/PhoneNumberType.html">PhoneNumberType</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">landline</span><span class="p">,</span> <span class="o">.</span><span class="n">mobile</span><span class="p">,</span> <span class="o">.</span><span class="n">voip</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification23blacklistedCountryCodesGSaSS_"></a>
+                    <a name="//apple_ref/swift/Property/blacklistedCountryCodes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification23blacklistedCountryCodesGSaSS_">blacklistedCountryCodes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Blacklisting a set of countries allows a user to use all VerificationKit&rsquo;s
+supported countries except those defined in blacklist. The value is an
+array of 2-letter country codes as defined by ISO 3166-1 Alpha 2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">blacklistedCountryCodes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification14headerTextTypeOS_14HeaderTextType"></a>
+                    <a name="//apple_ref/swift/Property/headerTextType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification14headerTextTypeOS_14HeaderTextType">headerTextType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of header text to use within the UI.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">headerTextType</span><span class="p">:</span> <span class="kt"><a href="../Enums/HeaderTextType.html">HeaderTextType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">verify</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification14lookupFunctionSS"></a>
+                    <a name="//apple_ref/swift/Property/lookupFunction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification14lookupFunctionSS">lookupFunction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The AWS Lambda function to look up phone number type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lookupFunction</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification17phonecallFunctionSS"></a>
+                    <a name="//apple_ref/swift/Property/phonecallFunction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification17phonecallFunctionSS">phonecallFunction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The AWS Lambda function to place phone call.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">phonecallFunction</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification10regionCodeSS"></a>
+                    <a name="//apple_ref/swift/Property/regionCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification10regionCodeSS">regionCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Phone number region code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">regionCode</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification11phoneNumberGSqVS_11PhoneNumber_"></a>
+                    <a name="//apple_ref/swift/Property/phoneNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification11phoneNumberGSqVS_11PhoneNumber_">phoneNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The input phone number.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">phoneNumber</span><span class="p">:</span> <span class="kt"><a href="../Structs/PhoneNumber.html">PhoneNumber</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification8senderIdSS"></a>
+                    <a name="//apple_ref/swift/Property/senderId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification8senderIdSS">senderId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A a custom ID that contains up to 11 alphanumeric characters, including 
+at least one letter and no spaces. The sender ID is displayed as the
+message sender on the receiving device. For example, you can use your
+business brand to make the message source easier to recognize. Support
+for sender IDs varies by country.
+See <a href="http://docs.aws.amazon.com/sns/latest/dg/sms_supported-countries.html">http://docs.aws.amazon.com/sns/latest/dg/sms_supported-countries.html</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">senderId</span> <span class="o">=</span> <span class="s">"Verify"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification5themeGSqVS_5Theme_"></a>
+                    <a name="//apple_ref/swift/Property/theme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification5themeGSqVS_5Theme_">theme</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A theme for the VerificationKit UI</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">theme</span><span class="p">:</span> <span class="kt"><a href="../Structs/Theme.html">Theme</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification20phoneValidationBlockGSqFTVS_11PhoneNumberGSqFTGSqCSo7NSError_GSqSb__T___T__"></a>
+                    <a name="//apple_ref/swift/Property/phoneValidationBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification20phoneValidationBlockGSqFTVS_11PhoneNumberGSqFTGSqCSo7NSError_GSqSb__T___T__">phoneValidationBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A custom verification which will be executed before sending SMS.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">phoneValidationBlock</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15VerificationKit20PhoneValidationBlock">PhoneValidationBlock</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification16fromEmailAddressGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/fromEmailAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification16fromEmailAddressGSqSS_">fromEmailAddress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sender email address. Must be a AWS SES verified email address.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fromEmailAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification14toEmailAddressGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/toEmailAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification14toEmailAddressGSqSS_">toEmailAddress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Receiver email address.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">toEmailAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification16htmlEmailContentGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/htmlEmailContent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification16htmlEmailContentGSqSS_">htmlEmailContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The content of the email, in HTML format. Use this for email clients
+that can process HTML. You can include clickable links, formatted text,
+and much more in an HTML message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">htmlEmailContent</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification16textEmailContentGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/textEmailContent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification16textEmailContentGSqSS_">textEmailContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The content of the message, in text format. Use this for text-based
+email clients, or clients on high-latency networks (such as mobile
+devices).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textEmailContent</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC15VerificationKit12Verification20emailValidationBlockGSqFTSSGSqFTGSqCSo7NSError_GSqSb__T___T__"></a>
+                    <a name="//apple_ref/swift/Property/emailValidationBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC15VerificationKit12Verification20emailValidationBlockGSqFTSSGSqFTGSqCSo7NSError_GSqSb__T___T__">emailValidationBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A custom verification which will be executed before sending email.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">emailValidationBlock</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15VerificationKit20EmailValidationBlock">EmailValidationBlock</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15VerificationKit12Verification11verifyPhoneFT10completionGSqFTGSqCSo7NSError_GSqVS_11PhoneNumber__T___T_"></a>
+                    <a name="//apple_ref/swift/Method/verifyPhone(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15VerificationKit12Verification11verifyPhoneFT10completionGSqFTGSqCSo7NSError_GSqVS_11PhoneNumber__T___T_">verifyPhone(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents a view controller to verify user&rsquo;s phone number.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">verifyPhone</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15VerificationKit27PhoneVerificationCompletion">PhoneVerificationCompletion</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the verification completes.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC15VerificationKit12Verification11verifyEmailFT10completionGSqFTGSqCSo7NSError_GSqSS__T___T_"></a>
+                    <a name="//apple_ref/swift/Method/verifyEmail(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC15VerificationKit12Verification11verifyEmailFT10completionGSqFTGSqCSo7NSError_GSqSS__T___T_">verifyEmail(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Presents a view controller to verify user&rsquo;s email address.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">verifyEmail</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:15VerificationKit27EmailVerificationCompletion">EmailVerificationCompletion</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Called when the verification completes.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-03-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

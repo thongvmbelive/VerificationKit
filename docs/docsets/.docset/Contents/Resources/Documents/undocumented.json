@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Theme.swift",
+      "line": 5,
+      "symbol": "Theme.buttonBackgroundColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Theme.swift",
+      "line": 6,
+      "symbol": "Theme.buttonTextColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Theme.swift",
+      "line": 8,
+      "symbol": "Theme.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Verification.swift",
+      "line": 21,
+      "symbol": "PhoneNumberType.landline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Verification.swift",
+      "line": 22,
+      "symbol": "PhoneNumberType.mobile",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Verification.swift",
+      "line": 23,
+      "symbol": "PhoneNumberType.voip",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Verification.swift",
+      "line": 28,
+      "symbol": "HeaderTextType.login",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/admin/dev/VerificationKit/VerificationKit/Core/Verification.swift",
+      "line": 29,
+      "symbol": "HeaderTextType.verify",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/admin/dev/VerificationKit"
+}

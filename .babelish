@@ -1,0 +1,141 @@
+###################################### Base2CSV ######################################
+
+## location of strings files (FILENAMES)
+filenames: [
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ar.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ca.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/cs.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/da.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/de.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/el.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/en-GB.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/en.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/es-MX.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/es.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/fi.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/fr.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/he.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/hi.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/hr.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/hu.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/id.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/it.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ja.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ko.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ms.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/nb.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/nl.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/pl.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/pt.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ro.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/ru.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/sk.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/sv.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/th.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/tr.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/uk.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/vi.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/zh-Hans.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/zh-Hant_HK.lproj/Localizable.strings",
+  "VerificationKit/Resources/VerificationKitStrings.bundle/zh-Hant_TW.lproj/Localizable.strings"
+]
+
+headers: [
+  "Variables",
+  "ar",
+  "ca",
+  "cs",
+  "da",
+  "de",
+  "el",
+  "en-GB",
+  "en",
+  "es-MX",
+  "es",
+  "fi",
+  "fr",
+  "he",
+  "hi",
+  "hr",
+  "hu",
+  "id",
+  "it",
+  "ja",
+  "ko",
+  "ms",
+  "nb",
+  "nl",
+  "pl",
+  "pt",
+  "ro",
+  "ru",
+  "sk",
+  "sv",
+  "th",
+  "tr",
+  "uk",
+  "vi",
+  "zh-Hans",
+  "zh-Hant_HK",
+  "zh-Hant_TW"
+]
+
+###################################### CSV2Base ######################################
+
+filename: translations.csv # CSV file (CSV_FILENAME) to convert from or name of file in Google Drive
+langs:                     # Languages to convert. i.e. English:en
+  "af": "af"
+  "ar": "ar"
+  "bg": "bg"
+  "bn": "bn"
+  "ca": "ca"
+  "cs": "cs"
+  "da": "da"
+  "de": "de"
+  "el": "el"
+  "en": "en"
+  "en-GB": "en-GB"
+  "es-ES": "es-ES"
+  "es-MX": "es-MX"
+  "es": "es"
+  "fa": "fa"
+  "fi": "fi"
+  "fr": "fr"
+  "gu": "gu"
+  "he": "he"
+  "hi": "hi"
+  "hr": "hr"
+  "hu": "hu"
+  "id": "id"
+  "it": "it"
+  "ja": "ja"
+  "kn": "kn"
+  "ko": "ko"
+  "ml": "ml"
+  "mr": "mr"
+  "ms": "ms"
+  "nb": "nb"
+  "nl": "nl"
+  "pa": "pa"
+  "pl": "pl"
+  "pt": "pt"
+  "ro": "ro"
+  "ru": "ru"
+  "sk": "sk"
+  "sr": "sr"
+  "sv": "sv"
+  "ta": "ta"
+  "te": "te"
+  "th": "th"
+  "ti": "ti"
+  "tr": "tr"
+  "uk": "uk"
+  "ur": "ur"
+  "vi": "vi"
+  "zh-Hans": "zh-Hans"
+  "zh-Hant_HK": "zh-Hant_HK"
+  "zh-Hant_TW": "zh-Hant_TW"
+
+output_dir: "VerificationKit/Resources/VerificationKitStrings.bundle" # Path of output files
+output_basenames:                                           # Basename of output files
+  - Localizable

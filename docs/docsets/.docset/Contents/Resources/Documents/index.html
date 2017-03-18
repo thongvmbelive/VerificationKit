@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (81% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Verification.html">Verification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/HeaderTextType.html">HeaderTextType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PhoneNumberType.html">PhoneNumberType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/PhoneNumber.html">PhoneNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Theme.html">Theme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:15VerificationKit20EmailValidationBlock">EmailValidationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:15VerificationKit27EmailVerificationCompletion">EmailVerificationCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:15VerificationKit20PhoneValidationBlock">PhoneValidationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:15VerificationKit27PhoneVerificationCompletion">PhoneVerificationCompletion</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#verificationkit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='verificationkit'>VerificationKit</h1>
+
+<p><strong>VerficationKit</strong> is a phone number and email address verification framework
+for iOS in Swift.</p>
+<a href='#why-verificationkit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='why-verificationkit'>Why VerificationKit?</h2>
+
+<table>
+  <tr>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <td>:sunglasses:</td>
+    <td>SMS sender is your app name</td>
+  </tr>
+  <tr>
+    <td>:muscle:</td>
+    <td>SMS messages in your own brand</td>
+  </tr>
+  <tr>
+    <td>:jp:</td>
+    <td>Localized in 50 languages</td>
+  </tr>
+  <tr>
+    <td>:telephone_receiver:</td>
+    <td>SMS and phone call verification</td>
+  </tr>
+  <tr>
+    <td>:rocket:</td>
+    <td>Fast integration, no server needed</td>
+  </tr>
+  <tr>
+    <td>:octocat:</td>
+    <td>Open source under the MIT license</td>
+  </tr>
+</table>
+<a href='#screenshots' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='screenshots'>Screenshots</h2>
+
+<p><img src="https://github.com/thii/VerificationKit/blob/master/.github/AddPhone.png?raw=true" height=480> <img src="https://github.com/thii/VerificationKit/blob/master/.github/VerifyPhone.png?raw=true" height=480></p>
+<a href='#getting-started' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='getting-started'>Getting Started</h2>
+<a href='#prerequisites' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='prerequisites'>Prerequisites</h3>
+
+<p>VerificationKit uses Amazon Simple Notification Service (SNS) to send SMS and
+Amazon Simple Email Service (SES) to send email. You need an Amazon Web Services
+account in order to get started.</p>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='usage'>Usage</h3>
+
+<ol>
+<li><p>Integrate VerificationKit into your project using Carthage:</p>
+<pre class="highlight plaintext"><code>github "thii/VerificationKit"
+</code></pre></li>
+<li><p>Add AWSCore, AWSLambda, AWSSES, AWSSNS frameworks into your project. You can
+follow the instructions from the
+<a href="https://github.com/aws/aws-sdk-ios">aws-sdk-ios</a> page. I recommend using adding
+them manually if you don&rsquo;t use all AWS frameworks.</p></li>
+<li><p>In your AWS account, go to Amazon Cognito service, click <strong>Manage Federated
+Identities</strong> &gt; <strong>Create new identity pool</strong> to create a new identity pool. Note
+your identity pool ID.</p></li>
+<li><p>Select <strong>Enable access to unauthenticated identities</strong>.</p></li>
+<li><p>The above step will create an IAM role. Go to your account&rsquo;s IAM service and
+attach <code>ses:SendEmail</code> policy to send emails and <code>sns:Publish</code> policy to send
+SMS.</p></li>
+<li><p>Attach policies to invoke any AWS Lambda functions that you want to use in
+your app (e.g. function to place phone calls, function to look up phone
+number type).</p></li>
+<li><p>To use phone number verification, in your AppDelegate&rsquo;s <code>application(_
+application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+[UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool</code>, add the following to configure
+the AWS services:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">credentialsProvider</span> <span class="o">=</span> <span class="kt">AWSCognitoCredentialsProvider</span><span class="p">(</span><span class="nv">regionType</span><span class="p">:</span> <span class="kt">AWSRegionType</span><span class="o">.</span><span class="n">usWest2</span><span class="p">,</span> <span class="nv">identityPoolId</span><span class="p">:</span> <span class="s">"IDENTITY_POOL_ID"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">AWSServiceConfiguration</span><span class="p">(</span><span class="nv">region</span><span class="p">:</span> <span class="kt">AWSRegionType</span><span class="o">.</span><span class="n">usWest2</span><span class="p">,</span> <span class="nv">credentialsProvider</span><span class="p">:</span> <span class="n">credentialsProvider</span><span class="p">)</span>
+<span class="kt">AWSServiceManager</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span><span class="o">.</span><span class="n">defaultServiceConfiguration</span> <span class="o">=</span> <span class="n">configuration</span>
+
+<span class="k">let</span> <span class="nv">verify</span> <span class="o">=</span> <span class="kt">Verification</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">appName</span> <span class="o">=</span> <span class="s">"Samples"</span>
+</code></pre>
+
+<p>Where <code>IDENTITY_POOL_ID</code> is the identity pool ID you noted in the first step.
+Change the <code>regionType</code> value to the region in which you have created your
+identity pool.</p>
+
+<p>To start verifying phone number, in your view controller, call:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">verify</span> <span class="o">=</span> <span class="kt">Verification</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">verifyPhone</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">phoneNumber</span><span class="p">)</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">error</span> <span class="p">??</span> <span class="s">""</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">phoneNumber</span> <span class="p">??</span> <span class="s">""</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>To use email address verification, in your AppDelegate&rsquo;s <code>application(_
+application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+[UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool</code>, add the following to configure
+the AWS services:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">credentialsProvider</span> <span class="o">=</span> <span class="kt">AWSCognitoCredentialsProvider</span><span class="p">(</span><span class="nv">regionType</span><span class="p">:</span> <span class="kt">AWSRegionType</span><span class="o">.</span><span class="n">usWest2</span><span class="p">,</span> <span class="nv">identityPoolId</span><span class="p">:</span> <span class="s">"IDENTITY_POOL_ID"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">AWSServiceConfiguration</span><span class="p">(</span><span class="nv">region</span><span class="p">:</span> <span class="kt">AWSRegionType</span><span class="o">.</span><span class="n">usWest2</span><span class="p">,</span> <span class="nv">credentialsProvider</span><span class="p">:</span> <span class="n">credentialsProvider</span><span class="p">)</span>
+<span class="kt">AWSServiceManager</span><span class="o">.</span><span class="nf">default</span><span class="p">()</span><span class="o">.</span><span class="n">defaultServiceConfiguration</span> <span class="o">=</span> <span class="n">configuration</span>
+
+<span class="k">let</span> <span class="nv">verify</span> <span class="o">=</span> <span class="kt">Verification</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">appName</span> <span class="o">=</span> <span class="s">"Samples"</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">fromEmailAddress</span> <span class="o">=</span> <span class="s">"email@example.com"</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">htmlEmailContent</span> <span class="o">=</span> <span class="s">"Your email verification code is: %@"</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">textEmailContent</span> <span class="o">=</span> <span class="s">"&lt;p&gt;Your email verification code is: %@&lt;/p&gt;"</span>
+</code></pre>
+
+<p><code>email@example.com</code> is the sender email address that you have added and
+verified in your Amazon SES account. You need to verify it in order to start
+sending email on its behalf.</p>
+
+<p>To start verifying user&rsquo;s email address, in your view controller, call:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">verify</span> <span class="o">=</span> <span class="kt">Verification</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">verifyEmail</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">error</span> <span class="p">??</span> <span class="s">""</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">email</span> <span class="p">??</span> <span class="s">""</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>(Optional) You may change the default theme of the verification view
+controller.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">theme</span> <span class="o">=</span> <span class="kt">Theme</span><span class="p">()</span>
+<span class="n">theme</span><span class="o">.</span><span class="n">buttonBackgroundColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">purple</span>
+<span class="n">theme</span><span class="o">.</span><span class="n">buttonTextColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span>
+<span class="k">let</span> <span class="nv">verify</span> <span class="o">=</span> <span class="kt">Verification</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">verify</span><span class="o">.</span><span class="n">theme</span> <span class="o">=</span> <span class="n">theme</span>
+</code></pre></li>
+</ol>
+
+<p>See more at <a href="https://thii.github.io/VerificationKit">Documentation</a>.</p>
+<a href='#samples-app' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='samples-app'>Samples App</h2>
+
+<p>To run the Samples app, first you need to copy the example constants file and
+change its default settings. You only need to set the <code>IDENTITY_POOL_ID</code> and
+<code>REGION_TYPE</code> if you just want to test the phone number verification feature.</p>
+<pre class="highlight plaintext"><code>cp Samples/Samples/Constants.swift.example Samples/Samples/Constants.swift
+</code></pre>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">IDENTITY_POOL_ID</span> <span class="o">=</span> <span class="s">"Your identity pool ID goes here"</span> <span class="c1">// E.g. "us-west-2:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span>
+<span class="k">let</span> <span class="nv">REGION_TYPE</span> <span class="o">=</span> <span class="kt">AWSRegionType</span><span class="o">.</span><span class="n">usWest2</span> <span class="c1">// The region in which you have created your identity pool</span>
+</code></pre>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p>MIT</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2017-03-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

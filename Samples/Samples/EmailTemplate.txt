@@ -1,0 +1,5 @@
+Your email verification code is:
+%@
+Please enter it into the app to verify your email address.
+
+This app uses VerificationKit to verify your email address.

@@ -1,0 +1,7 @@
+import AWSCore
+
+let IDENTITY_POOL_ID = "IDENTITY_POOL_ID"
+let REGION_TYPE = AWSRegionType.usWest2
+let LOOKUP_FUNCTION = "LOOKUP_FUNCTION"
+let CALLOUT_FUNCTION = "CALLOUT_FUNCTION"
+let FROM_EMAIL = "email@example.com"
