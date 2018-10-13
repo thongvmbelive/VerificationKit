@@ -208,7 +208,7 @@ internal extension Verification {
             completion?(error as NSError?)
             return
         }
-        let digits = verification.code.characters.map { String($0) }
+        let digits = verification.code.map { String($0) }
         let code = digits.joined(separator: ", ")
         let twiML = String(format: "<Response><Say language=\"en-US\" voice=\"alice\" loop=\"2\">Your verification code for %2$@ is, %1$@.</Say></Response>".localized, code, verification.appName)
 

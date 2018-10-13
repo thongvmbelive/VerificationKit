@@ -34,10 +34,10 @@ internal extension String {
     var isValidEmailAddress: Bool {
         let types: NSTextCheckingResult.CheckingType = [.link]
         let linkDetector = try? NSDataDetector(types: types.rawValue)
-        let range = NSRange(location: 0, length: self.characters.count)
+        let range = NSRange(location: 0, length: self.count)
         let result = linkDetector?.firstMatch(in: self, options: .reportCompletion, range: range)
         let scheme = result?.url?.scheme ?? ""
-        return scheme == "mailto" && result?.range.length == self.characters.count
+        return scheme == "mailto" && result?.range.length == self.count
     }
 
     var localized: String {
