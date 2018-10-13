@@ -1,8 +1,8 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode10
 install:
 - carthage bootstrap --no-build
 script:
 - set -o pipefail
 - xcodebuild -project VerificationKit.xcodeproj -scheme VerificationKit
-  -destination "name=iPhone 7 Plus" ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  -destination "name=iPhone XS Max" ONLY_ACTIVE_ARCH=NO | xcpretty -c
