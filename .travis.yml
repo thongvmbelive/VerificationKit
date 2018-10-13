@@ -2,7 +2,9 @@ language: objective-c
 osx_image: xcode10
 install:
 - carthage bootstrap --no-build
+- brew tap thii/xcbeautify https://github.com/thii/xcbeautify.git
+- brew install xcbeautify
 script:
 - set -o pipefail
 - xcodebuild -project VerificationKit.xcodeproj -scheme VerificationKit
-  -destination "name=iPhone XS Max" ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  -destination "name=iPhone XS Max" ONLY_ACTIVE_ARCH=NO | xcbeautify
