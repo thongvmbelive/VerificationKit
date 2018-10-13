@@ -16,11 +16,11 @@ class AddPhoneViewController: UIViewController {
         if let countryName = countryCode.countryName(), let callingCode = PhoneNumberKit().countryCode(for: countryCode) {
             if UIApplication.shared.userInterfaceLayoutDirection == .leftToRight {
                 let title = "\(countryCode.emojiFlag()) \(countryName) (+\(callingCode))"
-                callingCodeButton.setTitle(title, for: UIControlState())
+                callingCodeButton.setTitle(title, for: UIControl.State())
                 callingCodeButton.contentHorizontalAlignment = .left
             } else {
                 let title = "\(countryName) (\(callingCode)+)"
-                callingCodeButton.setTitle(title, for: UIControlState())
+                callingCodeButton.setTitle(title, for: UIControl.State())
                 callingCodeButton.contentHorizontalAlignment = .right
             }
         }
@@ -39,7 +39,7 @@ class AddPhoneViewController: UIViewController {
 
         addPhonePromtLabel.text = "Enter your phone number".localized
         phoneNumberField.placeholder = "Phone number".localized
-        nextButton.setTitle("Next".localized, for: UIControlState())
+        nextButton.setTitle("Next".localized, for: UIControl.State())
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -55,7 +55,7 @@ class AddPhoneViewController: UIViewController {
         phoneNumberField.resignFirstResponder()
     }
 
-    func cancel() {
+    @objc func cancel() {
         dismiss(animated: true, completion: nil)
     }
 
@@ -143,9 +143,9 @@ class AddPhoneViewController: UIViewController {
             self.nextButton.backgroundColor = isSending ? UIColor.lightGray : Verification.shared.theme?.buttonBackgroundColor
 
             if isSending {
-                self.nextButton.setTitle("Sending verification code".localized, for: UIControlState())
+                self.nextButton.setTitle("Sending verification code".localized, for: UIControl.State())
             } else {
-                self.nextButton.setTitle("Next".localized, for: UIControlState())
+                self.nextButton.setTitle("Next".localized, for: UIControl.State())
             }
         })
     }

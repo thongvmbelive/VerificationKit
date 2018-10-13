@@ -17,7 +17,7 @@ class AddEmailViewController: UIViewController, UITextFieldDelegate {
 
         promptLabel.text = "Enter your email address".localized
         emailTextField.placeholder = "user@example.com"
-        nextButton.setTitle("Next".localized, for: UIControlState())
+        nextButton.setTitle("Next".localized, for: UIControl.State())
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
@@ -36,7 +36,7 @@ class AddEmailViewController: UIViewController, UITextFieldDelegate {
         emailTextField.resignFirstResponder()
     }
 
-    func cancel() {
+    @objc func cancel() {
         dismiss(animated: true, completion: nil)
     }
 
@@ -101,9 +101,9 @@ class AddEmailViewController: UIViewController, UITextFieldDelegate {
             self.nextButton.backgroundColor = isSending ? UIColor.lightGray : Verification.shared.theme?.buttonBackgroundColor
 
             if isSending {
-                self.nextButton.setTitle("Sending email...".localized, for: UIControlState())
+                self.nextButton.setTitle("Sending email...".localized, for: UIControl.State())
             } else {
-                self.nextButton.setTitle("Next".localized, for: UIControlState())
+                self.nextButton.setTitle("Next".localized, for: UIControl.State())
             }
         })
     }

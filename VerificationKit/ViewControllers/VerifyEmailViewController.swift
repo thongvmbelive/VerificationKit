@@ -17,7 +17,7 @@ class VerifyEmailViewController: UIViewController, UITextFieldDelegate {
             enterCodePromptSubtitleLabel.text = String(format: "We sent a code to \n%@.".localized, email)
         }
         verificationCodeField.placeholder = "Verification code".localized
-        resendCodeButton.setTitle("Resend Email".localized, for: UIControlState())
+        resendCodeButton.setTitle("Resend Email".localized, for: UIControl.State())
 
         resendCodeButton.layer.cornerRadius = 5
 
@@ -25,7 +25,7 @@ class VerifyEmailViewController: UIViewController, UITextFieldDelegate {
         resendCodeButton.backgroundColor = verfication.theme?.buttonBackgroundColor
         resendCodeButton.titleLabel?.textColor = verfication.theme?.buttonTextColor
 
-        verificationCodeField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
+        verificationCodeField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +43,7 @@ class VerifyEmailViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         if textField.text?.count != 4 { return }
 
         let verification = Verification.shared
@@ -70,10 +70,10 @@ class VerifyEmailViewController: UIViewController, UITextFieldDelegate {
 
             if sending {
                 self.resendCodeButton.backgroundColor = UIColor.lightGray
-                self.resendCodeButton.setTitle("Sending email...".localized, for: UIControlState())
+                self.resendCodeButton.setTitle("Sending email...".localized, for: UIControl.State())
             } else {
                 self.resendCodeButton.backgroundColor = Verification.shared.theme?.buttonBackgroundColor
-                self.resendCodeButton.setTitle("Resend Email".localized, for: UIControlState())
+                self.resendCodeButton.setTitle("Resend Email".localized, for: UIControl.State())
             }
         })
     }

@@ -18,8 +18,8 @@ class VerificationPhoneViewController: UIViewController, UITextFieldDelegate {
             enterCodePromptSubtitleLabel.text = String(format: "We sent a code to \n%@.".localized, phoneNumberNationalFormatString)
         }
         verificationCodeField.placeholder = "Verification code".localized
-        resendCodeButton.setTitle("Resend code".localized, for: UIControlState())
-        callMeButton.setTitle("Call me".localized, for: UIControlState())
+        resendCodeButton.setTitle("Resend code".localized, for: UIControl.State())
+        callMeButton.setTitle("Call me".localized, for: UIControl.State())
 
         resendCodeButton.layer.cornerRadius = 5
         callMeButton.layer.cornerRadius = 5
@@ -31,7 +31,7 @@ class VerificationPhoneViewController: UIViewController, UITextFieldDelegate {
         callMeButton.titleLabel?.textColor = verfication.theme?.buttonTextColor
         callMeButton.isHidden = verfication.phonecallFunction == ""
 
-        verificationCodeField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
+        verificationCodeField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -57,7 +57,7 @@ class VerificationPhoneViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         if textField.text?.count != 4 { return }
 
         let verification = Verification.shared
@@ -84,10 +84,10 @@ class VerificationPhoneViewController: UIViewController, UITextFieldDelegate {
 
             if sending {
                 self.resendCodeButton.backgroundColor = UIColor.lightGray
-                self.resendCodeButton.setTitle("Sending...".localized, for: UIControlState())
+                self.resendCodeButton.setTitle("Sending...".localized, for: UIControl.State())
             } else {
                 self.resendCodeButton.backgroundColor = Verification.shared.theme?.buttonBackgroundColor
-                self.resendCodeButton.setTitle("Resend code".localized, for: UIControlState())
+                self.resendCodeButton.setTitle("Resend code".localized, for: UIControl.State())
             }
         })
     }
@@ -98,10 +98,10 @@ class VerificationPhoneViewController: UIViewController, UITextFieldDelegate {
 
             if calling {
                 self.callMeButton.backgroundColor = UIColor.lightGray
-                self.callMeButton.setTitle("Calling...".localized, for: UIControlState())
+                self.callMeButton.setTitle("Calling...".localized, for: UIControl.State())
             } else {
                 self.callMeButton.backgroundColor = Verification.shared.theme?.buttonBackgroundColor
-                self.callMeButton.setTitle("Call me".localized, for: UIControlState())
+                self.callMeButton.setTitle("Call me".localized, for: UIControl.State())
             }
         })
     }
