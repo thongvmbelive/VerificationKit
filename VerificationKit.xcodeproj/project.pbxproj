@@ -562,7 +562,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					$PROJECT_DIR,
-					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/ThirdParty",
 				);
 				INFOPLIST_FILE = VerificationKit/Info.plist;
@@ -588,7 +588,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					$PROJECT_DIR,
-					"$(PROJECT_DIR)/Carthage/Build/iOS/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/ThirdParty",
 				);
 				INFOPLIST_FILE = VerificationKit/Info.plist;
