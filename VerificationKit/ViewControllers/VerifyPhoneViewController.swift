@@ -15,7 +15,7 @@ class VerificationPhoneViewController: UIViewController, UITextFieldDelegate {
         enterCodePromtLabel.text = "Enter your code".localized
 
         if let phoneNumberNationalFormatString = Verification.shared.phoneNumber?.nationalFormat() {
-            enterCodePromptSubtitleLabel.text = String(format: "We sent a code to \n%@.".localized, phoneNumberNationalFormatString)
+            enterCodePromptSubtitleLabel.text = "We sent a code to \n\(phoneNumberNationalFormatString).".localized
         }
         verificationCodeField.placeholder = "Verification code".localized
         resendCodeButton.setTitle("Resend code".localized, for: UIControl.State())

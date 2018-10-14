@@ -14,7 +14,7 @@ class VerifyEmailViewController: UIViewController, UITextFieldDelegate {
         enterCodePromtLabel.text = "Enter your code".localized
 
         if let email = Verification.shared.toEmailAddress {
-            enterCodePromptSubtitleLabel.text = String(format: "We sent a code to \n%@.".localized, email)
+            enterCodePromptSubtitleLabel.text = "We sent a code to \n\(email).".localized
         }
         verificationCodeField.placeholder = "Verification code".localized
         resendCodeButton.setTitle("Resend Email".localized, for: UIControl.State())

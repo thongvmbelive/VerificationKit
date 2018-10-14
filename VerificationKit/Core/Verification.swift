@@ -156,7 +156,7 @@ public extension Verification {
 internal extension Verification {
     func sendSMS(_ completion: ((_ error: NSError?) -> Void)?) {
         let verification = Verification.shared
-        let message = String(format: "%@ is your %@ verification code.".localized, verification.code, verification.appName)
+        let message = "\(verification.code) is your \(verification.appName) verification code.".localized
         let phoneNumber = verification.phoneNumber?.stringRepresentation
 
         debugPrint("[VerificationKit] Phone number:", phoneNumber ?? "", separator: " ", terminator: "\n")
