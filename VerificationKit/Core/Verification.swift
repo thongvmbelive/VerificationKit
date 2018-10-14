@@ -52,10 +52,10 @@ public class Verification {
     public var headerTextType: HeaderTextType = .verify
 
     /// The AWS Lambda function to look up phone number type.
-    public var lookupFunction: String = ""
+    public var lookupFunction: String?
 
     /// The AWS Lambda function to place phone call.
-    public var phonecallFunction: String = ""
+    public var phonecallFunction: String?
 
     /// Phone number region code.
     public var regionCode: String {
@@ -183,6 +183,10 @@ internal extension Verification {
     }
 
     func lookup(_ completion: ((_ error: NSError?, _ numberType: PhoneNumberType?) -> Void)?) {
+        guard let lookupFunction = lookupFunction else {
+            fatalError("[VerificationKit] You must specify a lookupFunction")
+        }
+
         guard let phoneNumber = Verification.shared.phoneNumber?.stringRepresentation else {
             let error = NSError(domain: "com.verificationkit.error", code: -70002, userInfo: [NSLocalizedDescriptionKey: "Please enter a valid phone number.".localized])
             completion?(error, nil)
@@ -202,6 +206,10 @@ internal extension Verification {
     }
 
     func call(_ completion: ((_ error: NSError?) -> Void)?) {
+        guard let phonecallFunction = phonecallFunction else {
+            fatalError("[VerificationKit] You must specify a phoneCallFunction")
+        }
+
         let verification = Verification.shared
         guard let phoneNumber = verification.phoneNumber?.stringRepresentation else {
             let error = NSError(domain: "com.verificationkit.error", code: -70002, userInfo: [NSLocalizedDescriptionKey: "Please enter a valid phone number.".localized])
