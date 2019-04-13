@@ -3,6 +3,7 @@ import AWSLambda
 import AWSSES
 import AWSSNS
 import PhoneNumberKit
+import UIKit
 
 /// A custom verification type which will be executed before sending SMS.
 public typealias PhoneValidationBlock = (_ phoneNumber: PhoneNumber, _ completion: ((NSError?, Bool?) -> Void)?) -> Void

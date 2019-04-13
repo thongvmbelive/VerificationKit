@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 /// A theme for the VerificationKit UI
 public struct Theme {
